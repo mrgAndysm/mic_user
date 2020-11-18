@@ -1,0 +1,14 @@
+syntax = "proto3";
+package protouser;
+
+service UserService {
+    rpc CreateUser (QUserInfo) returns (RUserResult) {}
+}
+
+message QUserInfo{
+    string user_name=1;
+    string phone=2;
+}
+message RUserResult{
+    int64 userId=1;
+}
